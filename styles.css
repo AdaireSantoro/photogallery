@@ -3,6 +3,7 @@ body {
     background-color:#000000;
     color:#000000;
     width: 485px;
+    margin: auto;
 }
 
 #wrapper {
@@ -11,7 +12,7 @@ body {
 
 header {
     background-color:#ffffff; 
-    height: 50px;
+    height: 65px;
     padding: 35px;
     text-align: center;
     font-size: large;
@@ -21,14 +22,17 @@ header {
 
 h1 {
     color: #007d7b;
+    font-size: 3em;
+    position:absolute;
 }
 
 ul li {
     padding: 10px;
 }
 
-nav {
+nav a {
     text-align: center;
+    font-size: 1.5em;
 }
 
 nav li {
@@ -59,24 +63,146 @@ a:visited {
     border-radius: 20px 0 0px 0px;
 }
 
-.intro {
+h2 {
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.about {
     background-color: #ffffff;
+}
+
+p {
+    margin: 10px;
+    font-size: 1.25em;
+}
+
+.bottom-centered {
+    display: grid;
+    bottom: 5px;
+}
+
+#gallery {
+    background-color: #ffffff;
+
 }
 
 .container {
     background-color: #ffffff;
+    display: grid;
+    justify-content: center;
 }
+
+.item {
+    width: 100px;
+    height:50px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .contact {
     color:#ffffff;
+    display: inline-block;
+    position: relative;
+}
+
+h3 {
+    text-align: center;
+}
+
+#form {
+    font-size: 1em;
+    display: grid;
+}
+
+.input.text {
+    color:#007d7b;
 }
 
 
+#button {
+    color:#007d7b;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 12px;
+}
+
+small {
+    color: #ffffff;
+    text-align: center;
+}
 
 
+@media screen and (min-width: 880px) {
+    header {
+        width: 880px;
+    }
+
+    main {
+        width: 880px;
+    }
+
+    h1 {
+        position: static;
+    }
+
+    nav {
+        text-align: center;
+        width: 880px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;  
+        justify-content: start;
+    }
+
+    #form {
+        position: relative;
+        width: 880px;
+    }
+    small {
+        display: block;
+        text-align: center;
+        
+    }
+    
+}
 
 
+@media screen and (min-width: 1300px) {
+    main {
+        width: 1300px;
+    }
 
+    header {
+        width: 1300px;
+    }
+
+    nav a {
+        justify-content: right;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #form {
+        position: relative;
+        width: 1300px;
+    }
+    small {
+        display: block;
+        text-align: center;
+        
+    }
+}
 
 
 
