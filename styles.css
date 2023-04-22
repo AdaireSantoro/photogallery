@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color:#000000;
-    color:#000000;
     width: 485px;
     margin: auto;
 }
@@ -13,6 +12,7 @@ body {
 header {
     background-color:#ffffff; 
     height: 65px;
+    width:100%;
     padding: 35px;
     text-align: center;
     font-size: large;
@@ -83,22 +83,27 @@ p {
     bottom: 5px;
 }
 
+
 #gallery {
-    background-color: #ffffff;
-
-}
-
-.container {
     background-color: #ffffff;
     display: grid;
     justify-content: center;
 }
 
-.item {
+.grid-container {
+    background-color: #ffffff;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: center;
+
+}
+
+div.grid-item {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100px;
     height:50px;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    position:absolute;
+    text-align: center;
 }
 
 
@@ -141,6 +146,7 @@ small {
 @media screen and (min-width: 880px) {
     header {
         width: 880px;
+        text-align: center;
     }
 
     main {
@@ -153,13 +159,24 @@ small {
 
     nav {
         text-align: center;
-        width: 880px;
+        width: 100%;
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;  
-        justify-content: start;
+    #gallery {
+        background-color: #ffffff;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        column-gap: 2px;
+    }
+
+    .grid-container {
+        display: inline-flex;
+        flex-direction: column;
+        flex-grow: 2;
+    }
+
+    div.grid-item {
+        display: inline-flex;
     }
 
     #form {
@@ -178,6 +195,8 @@ small {
 @media screen and (min-width: 1300px) {
     main {
         width: 1300px;
+        position: absolute;
+        justify-content: center;
     }
 
     header {
@@ -185,12 +204,21 @@ small {
     }
 
     nav a {
+        align-items: center;
         justify-content: right;
     }
 
-    .container {
-        display: grid;
+    .grid-container {
+        display: inline-grid;
+        grid-gap: 5px;
+        grid-template-rows: 50px 50px;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    div.grid-item {
+        display:inline-flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     #form {
