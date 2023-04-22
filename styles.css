@@ -170,9 +170,9 @@ small {
     }
 
     .grid-container {
-        display: inline-flex;
         flex-direction: column;
-        flex-grow: 2;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
     }
 
     div.grid-item {
